@@ -4,6 +4,8 @@
 A port of the linux/android cheat engine server to Windows utilizing C# ported from the [official Cheat Engine repositotry](https://github.com/cheat-engine/cheat-engine/tree/a2d035583c35c0cb2455bd9aef771efbba1570c3/Cheat%20Engine/ceserver).
 The initial  reason this project was created was to 'bypass' some applications that block Cheat Engine when running in the same machine or just refuse to run when Cheat Engine is running as well. With this you can run Cheat Engine in a separate environment and connect to the target machine.
 
+The design, implementation and evaluation of the system is described in our Trustbus 2020 [paper](https://jresende.github.io/paper/cheatDetection.pdf).
+
 # Example usage
 If you just want to run the serve as is there is a console project named **CEServerApplicaiton** that takes advantage of the generated library which is an assembly with the following code:
 ```csharp
@@ -24,3 +26,4 @@ Even though the official cheat engine server 'ports' a few of Windows API calls 
 * **Debug symbols**: Symbols are not loaded as we believe that cheat engine expects debug symbols for elf binaries
 * **Speed hack**: Not implemented
 * **Alloc/Free**: Not implemented
+
